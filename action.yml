@@ -7,18 +7,22 @@ runs:
   image: docker://platane/snk@sha256:1c8a0b51a75ad8cf36b7defddd2187bdbb92bbbb5521a9e6cc5df795b00fc590
 
 inputs:
-  github_user_name:
+  github_user_name: "murilobeppler"
     description: "github user name"
     required: true
   github_token:
     description: "github token used to fetch the contribution calendar. Default to the action token if empty."
     required: false
     default: ${{ github.token }}
-  outputs:
-    required: false
-    description: |
-      list of files to generate.
-      one file per line. Each output can be customized with options as query string.
+ 
+  with:
+  github_user_name: "murilobeppler"
+
+    outputs:
+      required: false
+      description: |
+        list of files to generate.
+        one file per line. Each output can be customized with options as query string.
 
        supported query string options:
 
